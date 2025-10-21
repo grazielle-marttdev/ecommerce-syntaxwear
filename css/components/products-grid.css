@@ -39,7 +39,7 @@
         "highlight highlight sneaker-purple sneaker-purple"
         "highlight highlight model sneaker-color"
         "sneaker-white sneaker-white model sneaker-silver";
-    gap: 20px;
+    gap: 30px;
 }
 
 .top1-content {
@@ -67,4 +67,31 @@
 .cta-group {
     display: flex;
     gap: 10px;
+}
+
+@media (max-width: 768px) {
+	.grid-section{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: 
+		"highlight highlight"
+		"sneaker-white sneaker-white"
+		"model sneaker-color"
+		"model sneaker-silver"
+		"sneaker-purple sneaker-purple";
+		max-width: 100%;
+		gap: 0.625rem;
+	}
+
+	.highlight{
+		min-height: 500px;
+	}
+
+	.model{
+		min-height: 370px;
+	}
+
+	.sneaker-white, .sneaker-purple{
+		min-height: 190px;
+	}
 }
